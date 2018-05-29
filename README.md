@@ -63,5 +63,5 @@ an option.
 Huge thanks to...
 
 * [orbsmiv](https://github.com/orbsmiv) for [packaging](https://github.com/orbsmiv/docker-shairport-sync-rpi) shairplay-sync for the RPi platform.
-* [The shairplay-sync project](https://github.com/mikebrady/shairport-sync)
+* [The shairport-sync project](https://github.com/mikebrady/shairport-sync)
 * [The hap-nodejs project](https://github.com/KhaosT/HAP-NodeJS)
