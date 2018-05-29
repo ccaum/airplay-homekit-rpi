@@ -1,0 +1,14 @@
+[Unit]
+Description=AirPlay server with HomeKit switch
+Requires=docker.service
+
+[Service]
+ExecStartPre=/bin/sleep 1
+ExecStartPre=/usr/bin/docker pull ccaum/airplay-homekit-rpi:latest
+ExecStart=/usr/bin/docker run --net host --rm --name airplay_homekit --device /dev/snd -v /root/homekit-persist:/persist -e HOMEKIT_CODE=872-78-174 -e AIRPLAY_NAME=AirPlay_HomeKit ccaum/airplay-homekit-rpi:latest
+ExecStop=/usr/bin/docker stop airplay_homekit
+ExecStopPost=/usr/bin/docker rm -f airplay_homekit
+ExecReload=/usr/bin/docker restart airplay_homekit
+
+[Install]
+WantedBy=multi-user.target

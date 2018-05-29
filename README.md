@@ -22,6 +22,16 @@ show up as in AirPlay.
 If you need to set a different HomeKit code, if for example it conflicts with a
 code already in use, you can set a different value to HOMEKIT_CODE.
 
+### Systemd
+
+If you'd like the container to be controlled by systemd so it can start on
+boot, there's an example [airplay.service](airplay.service) file in this
+repository. 
+
+* Place the file in `/etc/systemd/system/airplay.service` on the raspberry pi.
+* Reload systemd with `systemctl daemon-reload`
+* Start the airplay service with `systemctl start airplay`
+
 ## Setting up HomeKit
 
 * In the Home app, tap the '+' symbol, then tap the "Add Accessory" option
