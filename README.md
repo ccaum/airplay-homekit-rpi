@@ -11,6 +11,17 @@ mood lighting whenever you play music.
 * Raspberry Pi configured on your network
 * Docker CE. For raspbian OS, see these setup instructions on the [Docker docs site](https://docs.docker.com/install/linux/docker-ce/debian/#upgrade-docker-ce-1)
 
+### Recommended hardware
+
+I highly recommend the following hardware components
+
+* [Raspberry Pi Zero W](https://www.amazon.com/CanaKit-Raspberry-Wireless-Official-Supply/dp/B071L2ZQZX/ref=sr_1_2?s=pc&ie=UTF8&qid=1527567717&sr=1-2&keywords=raspberry+pi+zero+w&dpID=51zutywP8gL&preST=_SY300_QL70_&dpSrc=srch)
+* [Raspberry Pi Zero Headers](https://www.amazon.com/Break-away-2x20-pin-Strip-Header-Raspberry/dp/B07CKQWLFF/ref=sr_1_3?s=electronics&ie=UTF8&qid=1527568280&sr=1-3&keywords=raspberry+pi+zero+break+away)
+* [HifiBerry DAC+ Zero](https://www.hifiberry.com/shop/boards/hifiberry-dac-zero/)
+* [HifiBerry DAC+ Zero Case](https://www.hifiberry.com/shop/cases/hifiberry-case-for-dac-zero/)
+
+You can skip the HifiBerry DAC, but you'll be seriously missing out. They sound WAY better than the RPi built in DAC.
+
 ## Running
 
 Running is simple. Just run the following Docker command:
