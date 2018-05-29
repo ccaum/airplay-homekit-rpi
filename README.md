@@ -14,7 +14,7 @@ mood lighting whenever you play music.
 ## Running
 
 Running is simple. Just run the following Docker command:
-`docker run -d --net host --device /dev/snd -v $HOME/persist:/persist -e HOMEKIT_CODE=872-78-174 -e AIRPLAY_NAME=<name your airplay speaker> ccaum/airplay-homekit-rpi`
+`docker run -d --net host --device /dev/snd -v $HOME/persist:/persist -e HOMEKIT_CODE=872-78-174 -e AIRPLAY_NAME=AirPlay_HomeKit ccaum/airplay-homekit-rpi:latest`
 
 Replace `<name your airplay speaker>` with whatever you want your speaker to
 show up as in AirPlay.
