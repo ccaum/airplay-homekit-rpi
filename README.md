@@ -55,7 +55,7 @@ automatically turn on audio equipment or set lighting scenes.
 
 ## Streaming Audio
 
-In iOS, tap the AirPlay symbol in you Music app, or whatever app you'd like to
+In iOS, tap the AirPlay symbol in your Music app, or whatever app you'd like to
 stream audio from. Whatever you named the AirPlay speaker should appear as 
 an option.
 
