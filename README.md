@@ -1,10 +1,10 @@
 # AirPlay with HomeKit for Raspberry Pi
 
 This project creates an AirPlay stream target on a Raspberry Pi. It also makes
-a HomeKit virtual switch available that turns on whenever a stream is active
-and off whenever a stream stops. This allows you to create automations
-that, for example, turn on smart switches attached to an audio system or set
-mood lighting whenever you play music.
+a HomeKit virtual power switch available that turns on whenever a stream is
+active and off whenever a stream stops. This allows you to create automations
+that, for example, turn on smart plug (e.g. [iHome ISP6x](https://www.amazon.com/iHome-control-connected-Assistant-speakers/dp/B01HCVG9NG/ref=sr_1_2_sspa?ie=UTF8&qid=1528072565&sr=8-2-spons&keywords=ihome+smart+plug&psc=1)) attached 
+to an audio system or set mood lighting whenever you play music.
 
 ## Requirements
 
@@ -50,7 +50,7 @@ repository.
 * Select the "Don't Have a Code or Can't Scan" option at the bottom of the screen
 * The "AirPlay Stream Switch" should be available as an option. Select it and complete the accessory addition process
 
-Once the AirPlay switch is set up in HomeKit, you can create automations
+Once the AirPlay power switch is set up in HomeKit, you can create automations
 automatically turn on audio equipment or set lighting scenes.
 
 ## Streaming Audio
