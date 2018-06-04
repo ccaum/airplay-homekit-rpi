@@ -41,6 +41,7 @@ repository.
 
 * Place the file in `/etc/systemd/system/airplay.service` on the raspberry pi.
 * Reload systemd with `systemctl daemon-reload`
+* Set it to start on boot with `systemctl enable airplay`
 * Start the airplay service with `systemctl start airplay`
 
 ## Setting up HomeKit
