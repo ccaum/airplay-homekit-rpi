@@ -9,6 +9,8 @@ var Service = hap.Service;
 var Characteristic = hap.Characteristic;
 var uuid = hap.uuid;
 var homekitCode = process.env.HOMEKIT_CODE;
+var offDelay = process.env.OFF_DELAY || 0;
+var offDelayTimer;
 console.log(homekitCode);
 
 var SWITCH = {
@@ -27,8 +29,19 @@ var switchUUID = uuid.generate('hap-nodejs:accessories:statefulswitch');
 
 var streamSwitch = exports.accessory = new Accessory('AirPlay Stream', switchUUID);
 
+function turnOff() {
+  SWITCH.on = false;
+  streamSwitch
+    .getService(Service.Switch)
+    .updateCharacteristic(Characteristic.On, false);
+}
+
 // Create the HTTP API endpoint
 app.get('/on', function(request, response) {
+  if (offDelay != undefined) {
+    clearInterval(offDelayTimer);
+  }
+
   SWITCH.on = true;
   streamSwitch
     .getService(Service.Switch)
@@ -38,10 +51,11 @@ app.get('/on', function(request, response) {
 });
 
 app.get('/off', function(request, response) {
-  SWITCH.on = false;
-  streamSwitch
-    .getService(Service.Switch)
-    .updateCharacteristic(Characteristic.On, false);
+  if (offDelay == undefined) {
+    turnOff();
+  } else {
+    offDelayTimer = setInterval(turnOff, 1000 * offDelay);
+  }
 
   response.send('Stream switch is off');
 });
